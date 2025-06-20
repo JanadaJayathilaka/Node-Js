@@ -23,20 +23,30 @@ const fs = require("fs");
 // let content = `Data read from input.txt: ${textIn}. \nDate created ${new Date()}`;
 // fs.writeFileSync("./Files/output.txt", content);
 
-fs.readFile("./Files/start.txt", "utf-8", (error, data) => {
-  console.log(data);
-  fs.readFile(`./Files/${data}.txt`, "utf-8", (error2, data2) => {
-    console.log(data2);
-    fs.readFile("./Files/append.txt", "utf-8", (error3, data3) => {
-      console.log(data3);
-      fs.writeFile(
-        "./Files/output.txt",
-        `${data2}\n ${data3} \n Date created: ${new Date()}`,
-        () => {
-          console.log("File written successfully!");
-        }
-      );
-    });
-  });
+// fs.readFile("./Files/start.txt", "utf-8", (error, data) => {
+//   console.log(data);
+//   fs.readFile(`./Files/${data}.txt`, "utf-8", (error2, data2) => {
+//     console.log(data2);
+//     fs.readFile("./Files/append.txt", "utf-8", (error3, data3) => {
+//       console.log(data3);
+//       fs.writeFile(
+//         "./Files/output.txt",
+//         `${data2}\n ${data3} \n Date created: ${new Date()}`,
+//         () => {
+//           console.log("File written successfully!");
+//         }
+//       );
+//     });
+//   });
+// });
+// console.log("reading file....");
+const http = require("http");
+
+const server = http.createServer((request, response) => {
+  response.end("Hello World!");
+  console.log("New request received from browser");
 });
-console.log("reading file....");
+
+server.listen(4000, "127.0.0.1", () => {
+  console.log("Server is running on http://127.0.0.1:4000");
+});
