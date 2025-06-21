@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 14",
+    "color": "Black",
+    "model": "A2649",
+    "ROM": "128GB",
+    "price": 999
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S23",
+    "color": "Green",
+    "model": "SM-S911B",
+    "ROM": "256GB",
+    "price": 899
+  },
+  {
+    "id": 3,
+    "name": "OnePlus 11",
+    "color": "Titan Black",
+    "model": "CPH2447",
+    "ROM": "256GB",
+    "price": 749
+  },
+  {
+    "id": 4,
+    "name": "Google Pixel 8",
+    "color": "Hazel",
+    "model": "GA04837",
+    "ROM": "128GB",
+    "price": 799
+  }
+]
