@@ -1,0 +1,25 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "a little test app",
+  "homepage": "https://github.com/JanadaJayathilaka/Node-Js#readme",
+  "bugs": {
+    "url": "https://github.com/JanadaJayathilaka/Node-Js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JanadaJayathilaka/Node-Js.git"
+  },
+  "license": "ISC",
+  "author": "me",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
