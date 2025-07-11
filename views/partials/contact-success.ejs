@@ -7,11 +7,7 @@
   </head>
   <body>
     <%- include('nav') %>
-    <h1>Contact Ussss</h1>
-
-    <form action="/contact" method="POST">
-      <input type="text" name="dept" value="<%= qs.dept %>" />
-      <button type="submit">Submit</button>
-    </form>
+    <h1>Contact success</h1>
+    <%= qs.dept %> has been successfully submitted.
   </body>
 </html>
