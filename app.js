@@ -1,15 +1,26 @@
 const express = require("express");
 const morgan = require("morgan");
+const mongoose = require("mongoose");
+
 //express app setup
 const app = express();
 
+//connect mongodb
+const dbURI = "mongodb://127.0.0.1:27017/netninja";
+
+mongoose
+  .connect(dbURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(3000, () => {
+      console.log("Connected to DB and listening on port 3000");
+    });
+  });
+
 //register view engine
 app.set("view engine", "ejs");
-
-//listen for requests
-app.listen(3000, () => {
-  console.log("listening on port 3000");
-});
 
 //middleware and static files
 app.use(express.static("public"));
