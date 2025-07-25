@@ -74,6 +74,20 @@ app.get("/blogs/:id", (req, res) => {
     });
 });
 
+app.delete("/blogs/delete/:id", (req, res) => {
+  const id = req.params.id;
+  Blog.findByIdAndDelete(id)
+    .then(() => {
+      return Blog.find().sort({ createdAt: -1 });
+    })
+    .then((blogs) => {
+      res.render("index", { title: "All Blogs", blogs });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 app.get("/blogs/create", (req, res) => {
   res.render("create", { title: "Create Page" });
 });
